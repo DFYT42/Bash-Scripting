@@ -1,7 +1,7 @@
 #!/bin/bash
-##Purpose: Modify multiple mod dates to bulk touched files
+##Purpose: Modify multiple months and years bulk files
 set -x
-cd /home/jbeach/file_rm_practice
+cd /42DFYT/git/mypersonalscripts/ChangeDatesNBulkFileFolder/file_rm_practice
 
 t=01;
 a=2000
