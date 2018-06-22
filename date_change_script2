@@ -1,0 +1,16 @@
+#!/bin/bash
+##Purpose: Modify multiple mod dates to bulk touched files
+set -x
+cd /home/jbeach/file_rm_practice
+
+t=01;
+a=2000
+for i in *;
+    do touch "$i" -d "$a"0"$t"01;
+        if [ "$t" -lt 12 ]; then
+	    t=$(($t+01));
+	elif [ "$t" -eq 12 ]; then
+            t=$((01))
+	    a=$(($a+1))
+	fi
+    done
