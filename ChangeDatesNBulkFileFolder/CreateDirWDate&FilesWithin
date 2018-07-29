@@ -8,11 +8,10 @@ set -x
 
 
 ##Variables
-OF=$(mkdir $(date '+%Y-%m')) ##makes directory w today's date
+OF=$(date ('+%Y-%m-%d')) ##makes directory w today's date
+THAT=$(mkdir $OF)
+MO=cd "$_" ##directs script into folder just created
 MOM=$(touch files{1..5}.txt) ##creates files
 
 ##Calls
-cd <path> ##directs script into subfolder to create daily folder & files
-$OF ##Calls this variable
-cd "$_" ##directs script into folder just created
-$MOM ##Calls this variable
+cd <path> && $THAT && $MO && $MOM
