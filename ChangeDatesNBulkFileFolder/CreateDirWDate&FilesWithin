@@ -1,0 +1,18 @@
+##cd into directory location, create directory with current date, cd into new directory, and touch files
+#!/bin/bash
+set -x
+
+##Working script--want to remove folders that already exist and run code below--otherwise "error: directory exists"
+##cd <file path>
+##rm $(date '+%Y-%m') -r;
+
+
+##Variables
+OF=$(mkdir $(date '+%Y-%m')) ##makes directory w today's date
+MOM=$(touch files{1..5}.txt) ##creates files
+
+##Calls
+cd <path> ##directs script into subfolder to create daily folder & files
+$OF ##Calls this variable
+cd "$_" ##directs script into folder just created
+$MOM ##Calls this variable
